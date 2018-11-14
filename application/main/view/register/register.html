@@ -1,0 +1,28 @@
+{include file="public/header" title="注册"}
+<link rel="stylesheet" href="__CSS__/register.css">
+<script>
+    var login = "{:url('Login/login')}";
+</script>
+</head>
+<!-- Head End -->
+<body class="bg">
+        <div class="top"></div>
+        <div class="top-title">注册</div>
+        <div class="main">
+            <form action="" method="POST" id="reg-form">
+                <p class="error-text"></p>
+                <input type="text" class="all-input user-input" name="username" placeholder="用户名由5-10位字母、数字组成">
+                <input type="text" class="all-input" name="nickname" placeholder="昵称由3-6位汉字、字母、数字组成">
+                <input type="password" class="all-input" name="password" placeholder="密码由6-12位字母和数字组成">
+                <input type="password" class="all-input" name="resPass" placeholder="重复密码">
+                <input type="text" class="all-input" name="phone" placeholder="手机号">
+                <input type="text" class="all-input" name="age" placeholder="年龄">
+                <p class="sex-input">性别：</p>
+                <input type="radio" checked class="male" name="sex" value="男">男
+                <input type="radio" class="female" name="sex" value="女">女
+                <button type="button" class="reg-btn" id="register-btn">注册</button>
+            </form>
+            <a href="{:url('Login/login')}" class="click-login">已有账号？返回登录</a>
+        </div>
+<script src="__JS__/register.js"></script>
+{include file="public/footer"}

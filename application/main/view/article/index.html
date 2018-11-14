@@ -1,0 +1,58 @@
+{include file="public/header" title="写留言"}
+<link rel="stylesheet" href="__CSS__/index.css">
+<link rel="stylesheet" href="__CSS__/write.css">
+<script>
+    var main = "{:url('Main/index')}";
+</script>
+</head>
+<!-- Head End -->
+<body class="bg">
+    <!-- TOP -->
+    <div class="header">
+        <div class="top">
+            <p class="top-title">留言板</p>
+            <div class="con">
+                {if $nick}
+                <div class="person">
+                    <p class="username">{$nick}</p>
+                    <ul>
+                        <li>
+                            <a href="">个人中心</a>
+                        </li>
+                        <li class="login-out">
+                            <a href="" id="logout">退出</a>
+                        </li>
+                    </ul>
+                </div>
+                {else /}
+                <a href="{:url('Login/login')}" class="top-btn login">登录</a>
+                <span>&nbsp;|&nbsp;</span>
+                <a href="{:url('Register/index')}" class="top-btn register">注册</a>
+                {/if}
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="main">
+        <p class="write-top">写出你的心声</p>
+        <div class="write-main">
+            <form action="" method="POST" id="write-form">
+                <input type="hidden" value="{$uid}" name="identity">
+                <div class="write-body">
+                    <div class="write-title">
+                        <input type="text" name="title" placeholder="请填写标题">
+                        <p class="error error-title"></p>
+                    </div>
+                    <div class="write-content">
+                        <textarea name="article" id="article" cols="45" rows="15" placeholder="请填写内容，不超过300字"></textarea>
+                        <p class="error error-content"></p>
+                    </div>
+                    <button type="button" class="release-btn" id="release">发布</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+<script src="__JS__/write.js"></script>
+{include file="public/footer"}

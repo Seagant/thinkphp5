@@ -1,0 +1,23 @@
+{include file="public/header" title="登录"}
+<link rel="stylesheet" href="__CSS__/login.css">
+<script>
+    var app = "{:url('Main/index')}";
+</script>
+</head>
+<!-- Head End -->
+<body class="bg">
+    <div class="top"></div>
+    <div class="top-title">登录</div>
+    <div class="main">
+        <form action="" method="POST" id="login-form">
+            <p class="error-text"></p>
+            <input type="hidden" name="__token__" value="{$Request.token}">
+            <input type="text" name="username" class="all-input user-input" placeholder="请输入用户名">
+            <input type="password" name="password" class="all-input pass-input" placeholder="请输入密码">
+            <input type="text" name="verify" class="all-input captcha-input" placeholder="输入验证码">
+            <img src="{:url('Login/verify')}" alt="验证码" class="captcha" id="verify-img">
+            <button type="button" class="login-btn" id="btn">登录</button>
+        </form>
+        <a href="{:url('Register/index')}" class="click-register">没有账号？点击注册</a>
+    </div>
+{include file="public/footer"}
