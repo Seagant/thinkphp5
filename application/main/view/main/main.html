@@ -5,41 +5,8 @@
     var out = "{:url('Main/index')}"
     var browse = "{:url('Main/browse')}";
 </script>
-</head>
-<!-- Head End -->
-<body class="bg">
-    <!-- TOP -->
-    <div class="header">
-        <div class="top">
-            <p class="top-title">留言板</p>
-            <div class="con">
-                {if $nickname}
-                <div class="person">
-                    <p class="nickname">{$nickname}</p>
-                    <ul>
-                        <li>
-                            <a href="">个人中心</a>
-                        </li>
-                        <li class="write">
-                            <a href="{:url('Article/index')}">写留言</a>
-                        </li>
-                        <li class="login-out">
-                            <a href="" id="logout">退出</a>
-                        </li>
-                    </ul>
-                </div>
-                {else /}
-                <a href="{:url('Login/login')}" class="top-btn login">登录</a>
-                <span>&nbsp;|&nbsp;</span>
-                <a href="{:url('Register/index')}" class="top-btn register">注册</a>
-                {/if}
-            </div>
-        </div>
-    </div>
-    <div class="clear"></div>
-    <!-- Body -->
-    <div class="main">
-        <input type="hidden" value="{$nickname}" id="name">
+{include file="public/mainHead"}
+        <input type="hidden" value="{$nick}" id="name">
         {volist name="list" id="vo"}
         <div class="content content-btn"  data-id="{$vo.id}" data-name="{$vo.author}">
             <div class="content-left">
@@ -61,7 +28,7 @@
             {$page}
         </div>
     </div>
-    {if $nickname}
+    {if $nick}
     <div class="tools" id="tool-btn">
         <a href="{:url('Article/index')}" style="color:black;">
             <i class="fa fa-pencil-square-o fa-3x" aria-hidden="true"></i>

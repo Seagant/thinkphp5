@@ -41,6 +41,8 @@ class AdminModel extends Model{
             return ['status' => false, 'msg' => '所填写的信息不能为空'];
         }else{
             $mysql = Db::name('admin')->where('username', $name)->find();
+            $getPhone = Db::name('admin')->where('phone', $phone)->field('phone')->find();
+            
             if ($mysql['username'] == $name){
                 return ['status' => false, 'msg' => '用户名已存在'];
             }else if(!$this->checkUsername($name)){
@@ -53,6 +55,8 @@ class AdminModel extends Model{
                 return ['status' => false, 'msg' => '密码不正确'];
             }else if($resPass !== $pass){
                 return ['status' => false, 'msg' => '两次密码不一样'];
+            }else if($phone == $getPhone['phone']){
+                return ['status' => false, 'msg' => '该手机号已经注册了'];
             }else if(!$this->checkPhone($phone)){
                 return ['status' => false, 'msg' => '手机号不正确'];
             }else if($age < 12 || $age > 99){

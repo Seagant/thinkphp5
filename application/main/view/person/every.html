@@ -1,0 +1,44 @@
+{include file="public/header" title="所有用户"}
+<script>
+    var every = "{:url('Personal/everybody')}";
+</script>
+    {include file="public/personHead"}
+            <div class="person-body person-every">
+                <div class="everyadmin-list">
+                    <table cellpadding="0" cellspacing="0">
+                        <tr>
+                            <th width=100 height=25>用户名</th>
+                            <th width=100 height=25>昵称</th>
+                            <th width=100 height=25>年龄</th>
+                            <th width=100 height=25>性别</th>
+                            <th width=100 height=25>手机号</th>
+                            <th width=100 height=25>状态</th>
+                            <th width=100 height=25>操作</th>
+                        </tr>
+                        {volist name="list" id="vo"}
+                        <tr class="admin-list">
+                            <td>{$vo.username}</td>
+                            <td>{$vo.nickname}</td>
+                            <td>{$vo.age}</td>
+                            <td>{$vo.sex}</td>
+                            <td>{$vo.phone}</td>
+                            {if $vo.status == 1}
+                            <td>正常</td>
+                            {else /}
+                            <td class="disabled">禁用</td>
+                            {/if}
+                            <td>
+                                <span class="tools-style disable" data-id="{$vo.id}">拉黑</span>
+                                &nbsp;|&nbsp;
+                                <span class="tools-style start" data-id="{$vo.id}">启用</span>
+                            </td>
+                        </tr>
+                        {/volist}
+                    </table>
+                </div>
+                <div class="pager">
+                    {$page}
+                </div>
+    {include file="public/personFooter"}
+<script src="__JS__/person.js"></script>
+{include file="public/footer"}

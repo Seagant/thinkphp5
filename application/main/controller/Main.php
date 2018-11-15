@@ -31,7 +31,7 @@ class Main extends Controller{
         $this->assign('list', $article);
         $this->assign('page', $page);
         return $this->fetch('main', [
-            'nickname' => $info['nickname']
+            'nick' => $info['nickname']
         ]);
     }
 

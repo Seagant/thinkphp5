@@ -1,0 +1,32 @@
+{include file="public/header" title="个人中心"}
+    {include file="public/personHead"}
+            <div class="person-body">
+                <div class="person-list person-name">
+                    <h4>用户名：</h4>
+                    <p>{$infoList.username}</p>
+                </div>
+                <div class="person-list person-nick">
+                    <h4>昵称：</h4>
+                    <p>{$infoList.nickname}</p>
+                </div>
+                <div class="person-list person-sex">
+                    <h4>性别：</h4>
+                    <p>{$infoList.sex}</p>
+                </div>
+                <div class="person-list person-age">
+                    <h4>年龄：</h4>
+                    <p>{$infoList.age}</p>
+                </div>
+                <div class="person-list person-phone">
+                    <h4>手机号：</h4>
+                    <p>{$infoList.phone}</p>
+                </div>
+                <div class="person-list person-time">
+                    <h4>账号创建于：</h4>
+                    <p>{$infoList.create_time}</p>
+                </div>
+            
+
+
+    {include file="public/personFooter"}
+{include file="public/footer"}

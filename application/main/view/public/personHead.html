@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="__CSS__/index.css">
+<link rel="stylesheet" href="__CSS__/person.css">
+</head>
+<!-- Head End -->
+<body class="bg">
+    <!-- TOP -->
+    <div class="header">
+        <div class="top">
+            <p class="top-title">留言板</p>
+            <div class="con">
+                {if $nick}
+                <div class="person">
+                    <p class="nickname">{$nick}</p>
+                    <ul>
+                        <li>
+                            <a href="{:url('Main/index')}">主页</a>
+                        </li>
+                        <li class="write">
+                            <a href="{:url('Article/index')}">写留言</a>
+                        </li>
+                        <li class="login-out">
+                            <a href="" id="logout">退出</a>
+                        </li>
+                    </ul>
+                </div>
+                {else /}
+                <a href="{:url('Login/login')}" class="top-btn login">登录</a>
+                <span>&nbsp;|&nbsp;</span>
+                <a href="{:url('Register/index')}" class="top-btn register">注册</a>
+                {/if}
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <!-- Body -->
+    <div class="main">
+        <div class="person-nav">
+            <ul>
+                <a href="{:url('Personal/index')}">
+                    <li class="info-list">个人信息</li>
+                </a>
+                <a href="{:url('Personal/editPerson')}">
+                    <li class="info-list">修改信息</li>
+                </a>
+                {if $name == "SuperAdmin"}
+                <a href="{:url('Personal/everybody')}">
+                    <li class="">所有用户</li>
+                </a>
+                {/if}
+            </ul>
+        </div>
+        <div class="show-person">
+            <div class="person-title">
+                <h2>{$infoTitle}</h2>
+            </div>
+            

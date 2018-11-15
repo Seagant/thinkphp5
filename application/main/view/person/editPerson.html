@@ -1,0 +1,29 @@
+{include file="public/header" title="个人中心"}
+    {include file="public/personHead"}
+            <div class="person-body">
+                <form method="POST" id="referForm">
+                    <div class="person-list">
+                        <h4>昵称：</h4>
+                        <input type="text" name="nickname" class="person-input input-nick" value="{$nick}">
+                        <p class="error-txt error-nick"></p>
+                    </div>
+                    <div class="person-list">
+                        <h4>旧密码：</h4>
+                        <input type="password" name="oldPass" class="person-input input-old">
+                        <p class="error-txt error-old"></p>
+                    </div>
+                    <div class="person-list">
+                        <h4>新密码：</h4>
+                        <input type="password" name="newPass" class="person-input input-new">
+                        <p class="error-txt error-new"></p>
+                    </div>
+                    <div class="person-list">
+                        <h4>重复新密码：</h4>
+                        <input type="password" name="reNewPass" class="person-input input-res">
+                        <p class="error-txt error-res"></p>
+                    </div>
+                </form>
+                <button type="button" class="person-btn" id="personCommit">提交</button>
+    {include file="public/personFooter"}
+<script src="__JS__/person.js"></script>
+{include file="public/footer"}
