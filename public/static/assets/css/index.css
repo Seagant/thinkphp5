@@ -1,0 +1,405 @@
+.bg{
+    background-color: #fff9f9;
+}
+.header{
+    position: relative;
+    height: 50px;
+    min-width: 800px;
+    background-color: #e9d7d7;
+    border-bottom: 1px solid #c0b6b6;
+}
+.top{
+    height: 50px;
+    text-align: center;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.top .top-title{
+    position: relative;
+    float: left;
+    left: 5%;
+    line-height: 50px;
+    color: dimgrey;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+.top .top-btn{
+    color: #bd8383;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 4px;
+}
+.top .top-btn:hover{
+    color: #9c6b6b;
+}
+.top .con{
+    position: relative;
+    float: right;
+    right: 5%;
+    line-height: 50px;
+}
+.main{
+    position: relative;
+    max-width: 800px;
+    min-width: 800px;
+    height: 800px;
+    background-color: #edfffd;
+    margin: 0 auto;
+    border: 1px solid #c0b6b6;
+    border-top: none;
+}
+.main .content{
+    height: 80px;
+    background-color: #fbfce3;
+    border-bottom: 1px solid #2e2d2d;
+    display: flex;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+.main .content:hover{
+    background-color: #d3d4bf;
+}
+.content > div{
+    flex: none;
+}
+.main .content-left{
+    margin-top: 10px;
+    height: 60px;
+    line-height: 60px;
+    border-right: 1px solid #aca3a3;
+    width: 120px;
+    text-align: center;
+}
+.main .content-right{
+    max-width: 680px;
+}
+.content-title{
+    margin: 10px 0 15px 20px;
+}
+.content-title p{
+    font-weight: bold;
+    font-size: 18px;
+}
+.content-right h3{
+    float: left;
+}
+.main-content{
+    margin-left: 21px;
+}
+/* .main-content span{
+    float: left;
+    font-size: 21px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+} */
+.main-content > div{
+    max-width: 550px;
+    line-height: 26px;
+    font-size: 15px;
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+}
+.top .person{
+    cursor: pointer;
+}
+.top .nickname{
+    font-size: 16px;
+    width: 90px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.top .person ul{
+    background-color: #fff;
+    text-align: center;
+    position: absolute;
+    display: none;
+    z-index: 999;
+    border: 1px solid #e9d7d7;
+    border-top: none;
+    box-sizing: border-box;
+}
+.top .person ul li{
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    font-family: fantasy;
+    font-size: 14px;
+}
+.top .person ul li:hover{
+    background-color: #e9d7d7;
+}
+.top .person ul li a{
+    color: #6f7b86;
+}
+.top .person ul .write{
+    border-top: 1px solid #e9d7d7;
+    border-bottom: 1px solid #e9d7d7;
+    box-sizing: border-box;
+}
+.top .person:hover ul{
+    display: block;
+}
+.tools{
+    position: fixed;
+    left: 46%;
+    bottom: 100px;
+    margin-left: 498px;
+    z-index: 1005;
+    cursor: pointer;
+}
+.no-name{
+    color: #c5c9cc;
+    cursor: auto;
+}
+
+/* 分页样式 */
+.pager {
+    /* padding-left: 0;
+    margin: 20px 0;
+    text-align: center; */
+    list-style: none;
+    position: absolute;
+    bottom: 0;
+    left: 42%;
+}
+   
+.pager li {
+    display: inline;
+}
+
+.pager li > a,
+.pager li > span {
+    display: inline-block;
+    padding: 5px 14px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+}
+
+.pager li > a:hover,
+.pager li > a:focus {
+    text-decoration: none;
+    background-color: #eee;
+}
+
+.pager .next > a,
+.pager .next > span {
+    float: right;
+}
+.pager .previous > a,
+.pager .previous > span {
+    float: left;
+}
+
+.pager .disabled > a,
+.pager .disabled > a:hover,
+.pager .disabled > a:focus,
+.pager .disabled > span {
+    color: #777;
+    cursor: not-allowed;
+    background-color: #fff;
+}
+
+.pager:before,
+.pager:after,
+.pager:after,
+.pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.pagination > li {
+    display: inline;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #337ab7;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+.pagination > li:first-child > a,
+.pagination > li:first-child > span {
+    margin-left: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+    color: #23527c;
+    background-color: #eee;
+    border-color: #ddd;
+}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+    z-index: 2;
+    color: #fff;
+    cursor: default;
+    background-color: #337ab7;
+    border-color: #337ab7;
+}
+.pagination > .disabled > span,
+.pagination > .disabled > span:hover,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus {
+    color: #777;
+    cursor: not-allowed;
+    background-color: #fff;
+    border-color: #ddd;
+}
+.pagination-lg > li > a,
+.pagination-lg > li > span {
+    padding: 10px 16px;
+    font-size: 18px;
+}
+.pagination-lg > li:first-child > a,
+.pagination-lg > li:first-child > span {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+.pagination-lg > li:last-child > a,
+.pagination-lg > li:last-child > span {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+.pagination-sm > li > a,
+.pagination-sm > li > span {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+.pagination-sm > li:first-child > a,
+.pagination-sm > li:first-child > span {
+    border-top-left-radius: 3px;
+border-bottom-left-radius: 3px;
+}
+.pagination-sm > li:last-child > a,
+.pagination-sm > li:last-child > span {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+/* 浏览界面 */
+.show-back{
+    float: right;
+    width: 40px;
+    height: 30px;
+    border-radius: 2px;
+    border: none;
+    background-color: #52aeff;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 100px;
+    margin-top: 60px;
+}
+.show-back:hover{
+    background-color: #337ab7;
+}
+.show-block{
+    height: 100px;
+}
+.show-content{
+    max-width: 600px;
+    height: 650px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+.show-content .show-title{
+    height: 45px;
+    border-bottom: 1px solid #000;
+    line-height: 45px;
+}
+.show-content .show-title > p{
+    margin-left: 30px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.show-content .show-main{
+    height: 300px;
+    line-height: 35px;
+}
+.show-content .show-main > p{
+    margin: 20px 30px 0 30px;
+}
+.show-content .show-time{
+    height: 100px;
+    line-height: 100px;
+    border-bottom: 1px solid #000;
+}
+.show-content .show-time > p{
+    font-size: 14px;
+    float: right;
+    margin-right: 20px;
+}
+.show-content .show-author{
+    height: 40px;
+    line-height: 40px;
+}
+.show-content .show-author > p{
+    margin-left: 10px;
+}
+.show-content .show-edit{
+    float: right;
+    margin-right: 30px;
+}
+.show-content .show-edit > a{
+    font-size: 14px;
+    color: #52aeff;
+}
+
+
+/* 编辑页面 */
+.edit-sure{
+    margin-right: 20px;
+}
+.edit-back{
+    margin-right: 100px;
+}
+.edit-btn{
+    float: right;
+    width: 40px;
+    height: 30px;
+    border-radius: 2px;
+    border: none;
+    background-color: #52aeff;
+    color: #fff;
+    cursor: pointer;
+    /* margin-right: 100px; */
+    margin-top: 60px;
+}
+.edit-btn:hover{
+    background-color: #337ab7;
+}
+.edit-block{
+    height: 100px;
+}
+.edit-content{
+    max-width: 600px;
+    height: 650px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}

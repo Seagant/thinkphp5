@@ -1,0 +1,119 @@
+.main .person-nav{
+    height: 50px;
+    max-width: 800px;
+    min-width: 780px;
+    background-color: blanchedalmond;
+    border-bottom: 1px solid #c0b6b6;
+}
+.main .person-nav > ul > a > li{
+    float: left;
+    width: 100px;
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 30px;
+    margin: 10px 0;
+    text-align: center;
+    border-right: 1px solid #d4d4d4;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.main .person-nav > ul > a{
+    height: 50px;
+    color: black;
+}
+.main .person-nav > ul > a:hover,a:visited{
+    background-color: #c5b59d;
+}
+.main .person-nav .blacklist{
+    border: none;
+}
+.show-person .person-title{
+    height: 60px;
+    border-bottom: 1px solid #ccc;
+}
+.show-person .person-title > h2{
+    margin-left: 20px;
+    line-height: 60px;
+}
+.show-person .person-body{
+    height: 100%;
+    margin: 30px;
+}
+h4{
+    float: left;
+}
+.show-person .person-body .person-list{
+    width: 500px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 15px;
+    border-bottom: 2px solid #e6e5e5;
+}
+
+/* 修改页面 */
+.person-body .person-input{
+    float: left;
+    height: 20px;
+    width: 200px;
+    border-radius: 3px;
+    outline: 0;
+    border: 1px solid #ccc;
+    box-sizing: content-box;
+    outline: 0;
+    padding: 3px;
+    text-align: center;
+    margin-top: 13px;
+}
+.person-body .person-input:focus{
+    border: 1px solid #5c9dff;
+}
+.person-body .person-btn{
+    float: right;
+    width: 40px;
+    height: 30px;
+    border-radius: 2px;
+    border: none;
+    background-color: #52aeff;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 100px;
+    margin-top: 60px;
+}
+.person-body .person-btn:hover{
+    background-color: #337ab7;
+}
+.error-txt{
+    float: left;
+    color: #ff2525;
+    font-weight: 700;
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+/* 所有用户 */
+.show-person .person-every{
+    margin: 15px;
+}
+.show-person .person-every .everyadmin-list > table{
+    margin: 0 auto;
+}
+.show-person .person-body .admin-list{
+    text-align: center;
+    height: 25px;
+    line-height: 25px;
+}
+.show-person .person-body .admin-list > td{
+    width: 100px;
+    border-bottom: 1px solid #000;
+    box-sizing: border-box;
+}
+.show-person .person-body .admin-list .disabled{
+    color: #fd5757;
+}
+.show-person .person-body .admin-list .tools-style{
+    color: #4598e0;
+    cursor: pointer;
+}
+.show-person .person-body .admin-list .tools-style:hover{
+    color: #3e8acc;
+}

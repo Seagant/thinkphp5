@@ -1,0 +1,79 @@
+.bg{
+    background-color: #e7fdf6;
+}
+.top{
+    height: 100px;
+}
+.top-title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Microsoft Yahei";
+    color: #beb3a3;
+    margin-bottom: 20px;
+}
+.main{
+    margin: 0 auto;
+    width: 380px;
+    height: 500px;
+    background-color: rgba(231, 255, 146, .5);
+    border-radius: 10px;
+    border: 1px solid #beb3a3;
+    display: flex;
+    flex-flow: column;
+}
+.main > div{ 
+    flex: none;
+}
+.main .all-input{
+    height: 30px;
+    width: 260px;
+    border-radius: 5px;
+    border: 1px solid #beb3a3;
+    box-sizing: border-box;
+    outline: none;
+    padding: 14px;
+    margin: 0 0 20px 70px;
+}
+.main .user-input{
+    margin-top: 20px;
+}
+.main .sex-input{
+    margin-left: 70px;
+    float: left;
+}
+.main .male{
+    margin: 0 5px 0 30px;
+}
+.main .female{
+    margin: 0 5px 0 20px;
+}
+.main .error-text{
+    color: #ff2525;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 14px;
+}
+.main .reg-btn{
+    margin: 30px 0 40px 70px;
+    outline: none;
+    width: 260px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: aquamarine;
+    color: teal;
+    font-weight: bold;
+}
+.main .reg-btn:hover{
+    background-color: #389979;
+    color: #e7fdf6;
+}
+.main .click-login{
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #389979;
+}
